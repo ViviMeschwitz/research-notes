@@ -17,5 +17,5 @@
 | subset | サブセット | 部分集合 | A is a subset of B |
 | complement | コンプリメント | 補集合 | the complement of A |
 | entropy | エントロピー | エントロピー | Shannon entropy |
-| inference | インファレンス | 推論 | logical inference |
-| convergence | コンバージェンス | 収束 | convergence of a sequence |
+| proof | プルーフ | 証明 | proof by contradiction |
+| differential equation | ディファレンシャル イクエーション | 微分方程式 | Newton's differential equation |
