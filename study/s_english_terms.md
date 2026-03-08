@@ -17,5 +17,5 @@
 | subset | サブセット | 部分集合 | A is a subset of B |
 | complement | コンプリメント | 補集合 | the complement of A |
 | entropy | エントロピー | エントロピー | Shannon entropy |
-| proof | プルーフ | 証明 | proof by contradiction |
+| proof | プルーフ | 証明 | a mathematical proof |
 | differential equation | ディファレンシャル イクエーション | 微分方程式 | Newton's differential equation |
