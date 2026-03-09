@@ -23,20 +23,22 @@
 
 ## 累計術語リスト
 
-### Day 2（8語）
-1. set / subset
-2. element
-3. union / intersection
-4. complement
-5. entropy
-6. information
-7. derivative
-8. differential equation
+### Day 2（10語）
+1. **proposition**（プロポジション）：命題 / a mathematical proposition
+2. **predicate**（プレディケイト）：述語 / a predicate in logic
+3. **contrapositive**（コントラポジティブ）：対偶 / the contrapositive of P→Q
+4. **set**（セット）：集合 / a set of real numbers
+5. **element**（エレメント）：要素 / an element of a set
+6. **subset**（サブセット）：部分集合 / A is a subset of B
+7. **complement**（コンプリメント）：補集合 / the complement of A
+8. **entropy**（エントロピー）：エントロピー / Shannon entropy
+9. **proof**（プルーフ）：証明 / a mathematical proof
+10. **differential equation**（ディファレンシャル イクエーション）：微分方程式 / Newton's differential equation
 
 ### Day 3（10語）
 上記参照
 
-**累計：18語**
+**累計：20語**
 
 ---
 
