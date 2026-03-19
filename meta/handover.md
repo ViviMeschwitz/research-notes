@@ -191,23 +191,35 @@ git pushで自動デプロイ。
 - Git設定修正（ViviMeschwitz + noreplyメール）
 - 自習ガイド作成（meta/self_study_guide.md）
 - 司令塔ファイル（このファイル）を再構築
+- page.tsxは1つだけ → 文豪アプリはSPA
+- page.tsxは「指揮者」。状態管理と画面切り替えを担当
+- 各画面の中身はcomponents/フォルダの個別ファイルが持つ
+- View型は4つ：list, session, book-editor, irokawa
+- APIでClaudeに話しかけるには最低3つ：APIキー、モデル名、メッセージ
+- APIキーは「家の鍵」。絶対に公開してはいけない
+- コース全体は6ノートブック。01〜06の順に進める
+- Anthropic API Fundamentalsコースをclone、01の概念を理解
+- Shannon原論文 Introductionの全体像をclaudeと日本語によって確認
+- Shannonの通信モデル：情報源→送信機→通信路→受信機→宛先（＋雑音源）
+- 通信の根本問題：メッセージを別の地点で再現すること。意味は無関係。
+- 情報量の単位ビット：状態の数Nに対して log₂(N) で測る
+- 対数を使う理由：実用的（線形）、直感的（加法的）、数学的に便利
+- 文豪アプリを実際に触って、バグや改善点をメモ
+- 文豪アプリのデータ構造問題を診断、設計ドキュメントを作成
 
 ---
 
 ## 明日のDay 14で進めるべきこと
 
-### 最優先
-1. 数学: indiscrete topology → discrete → finite-closed（英語で）
-2. 哲学: デカルト省察 第1省察（Bennett訳 + 落合訳 並行読み）
-
-### 進行中
-3. 自分のbungouコードを読む（Claudeとの対話で構造理解）
-4. 文豪のバグ発見・改善案リスト作成
-
-### 未着手
-5. Anthropic API Fundamentalsコース開始
-6. Shannon原論文 Phase 2
-7. X投稿: Day 13のデプロイ成果を英語で投稿
+- 数学: indiscrete topology → discrete → finite-closed（英語で）
+- 自分のbungouコードを読む（Claudeとの対話で構造理解）
+- Claude Codeで文豪のPrismaスキーマを確認（プロンプト準備済み）
+- 確認結果をもとに、通常チャットでデータ構造を再設計
+- ネットワークが使える環境でanthropicパッケージをインストール
+- 01のExerciseを実行
+- 02 messages_formatに進む
+- Shannon原論文の続きを日本語でclaudeとの対話によって進む
+- 英語学習の方針確立
 
 ---
 
