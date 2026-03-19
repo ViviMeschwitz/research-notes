@@ -35,7 +35,7 @@ Truth is One.
 ## 現在地
 
 - プロジェクト開始日: 2026-03-07
-- 本日: Day 13（2026-03-19）
+- 本日: Day 14（2026-03-20）
 - 文豪アプリ: **本番デプロイ済み** → https://bungou-seven.vercel.app
 
 ---
@@ -183,7 +183,7 @@ git pushで自動デプロイ。
 
 ---
 
-## 本日（Day 13）の成果
+## 昨日（Day 13）の成果
 
 - 文豪アプリを Vercel + Supabase で本番デプロイ完了
 - Google OAuth認証を本番環境で動作確認
@@ -209,7 +209,7 @@ git pushで自動デプロイ。
 
 ---
 
-## 明日のDay 14で進めるべきこと
+## 今日のDay 14で進めるべきこと
 
 - 数学: indiscrete topology → discrete → finite-closed（英語で）
 - 自分のbungouコードを読む（Claudeとの対話で構造理解）
@@ -223,4 +223,4 @@ git pushで自動デプロイ。
 
 ---
 
-*最終更新: Day 13 (2026-03-19)*
+*最終更新: Day 14 (2026-03-20)*
