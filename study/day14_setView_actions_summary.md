@@ -73,3 +73,20 @@ View変数の値をirokawaからlistに変更
           setView("session");
         }}
 新しいテキストボタンを押すと、viewの値がirokawaからsessionに変わる。
+
+## Claude
+完璧だ。9箇所全て正確に読めている。
+お前の最初の疑問に答える。
+- setViewとは何か
+const [view, setView] = useState<View>("list");
+useStateは常に2つのものを返す。
+
+view = 現在の値（読み取り用）
+setView = 値を変更する関数（書き込み用）
+
+直接 view = "session" と書いても画面は更新されない。setViewを通して変えることで、Reactが「値が変わった、画面を再描画しろ」と認識する。 これがuseStateの仕組み。
+だから全てのuseStateが同じパターンになっている：
+
+[projects, setProjects] — projectsを読む、setProjectsで変える
+[current, setCurrent] — currentを読む、setCurrentで変える
+[view, setView] — viewを読む、setViewで変える
