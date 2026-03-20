@@ -35,7 +35,7 @@ Truth is One.
 ## 現在地
 
 - プロジェクト開始日: 2026-03-07
-- 本日: Day 14（2026-03-20）
+- 本日: Day 15（2026-03-21）
 - 文豪アプリ: **本番デプロイ済み** → https://bungou-seven.vercel.app
 
 ---
@@ -170,57 +170,34 @@ git pushで自動デプロイ。
 
 ## 進行中の問い（次のClaudeセッションに持ち込む）
 
-### 数学
-- τ₁ = {∅, X} はなぜ「最も小さい」位相か？（→ indiscrete topology）
-- discrete topology, finite-closed topologyの理解
-
-### 哲学
-- デカルト省察 第1省察をBennett訳で読み始める
-
-### 技術
-- 自分のbungouコードを読めるようになる（page.tsx 737行の構造理解）
-- Anthropic API Fundamentalsコース開始
-
 ---
 
-## 昨日（Day 13）の成果
+## 昨日（Day 14）の成果
 
-- 文豪アプリを Vercel + Supabase で本番デプロイ完了
-- Google OAuth認証を本番環境で動作確認
-- SSL接続問題を解決（pg.Pool + rejectUnauthorized: false）
-- Git設定修正（ViviMeschwitz + noreplyメール）
-- 自習ガイド作成（meta/self_study_guide.md）
-- 司令塔ファイル（このファイル）を再構築
-- page.tsxは1つだけ → 文豪アプリはSPA
-- page.tsxは「指揮者」。状態管理と画面切り替えを担当
-- 各画面の中身はcomponents/フォルダの個別ファイルが持つ
-- View型は4つ：list, session, book-editor, irokawa
-- APIでClaudeに話しかけるには最低3つ：APIキー、モデル名、メッセージ
-- APIキーは「家の鍵」。絶対に公開してはいけない
-- コース全体は6ノートブック。01〜06の順に進める
-- Anthropic API Fundamentalsコースをclone、01の概念を理解
-- Shannon原論文 Introductionの全体像をclaudeと日本語によって確認
-- Shannonの通信モデル：情報源→送信機→通信路→受信機→宛先（＋雑音源）
-- 通信の根本問題：メッセージを別の地点で再現すること。意味は無関係。
-- 情報量の単位ビット：状態の数Nに対して log₂(N) で測る
-- 対数を使う理由：実用的（線形）、直感的（加法的）、数学的に便利
-- 文豪アプリを実際に触って、バグや改善点をメモ
-- 文豪アプリのデータ構造問題を診断、設計ドキュメントを作成
+- Prismaスキーマ再設計 + 本番デプロイ
+- テキスト生成の簡略化
+- 詳細画面（TextDetail）の実装
+- 色の保存機能
+- Version機能（保存・新しい解釈・ツリー切り替え）
+- Link機能の設計確定 + 既存機能との整合性調査
+- indiscrete/discrete/finite-closed topology, closed, clopen
+- 文豪アプリ：コード理解（VSCode環境構築、page.tsx読解）+ データ構造再設計（Version/Link分離の概念設計）
+- Shannon原論文：3つのLevel、近似の次数、エントロピーの定義
+- Anthropic API：01概念理解、$5購入問題の判断
+- 英語学習：方針確立、最初の暗唱文作成・紙に再現
 
----
+## 今日のDay 15で進めるべきこと
 
-## 今日のDay 14で進めるべきこと
+-数学
+Topology Without Tearsの続き。finite-closed topologyの具体例をXが無限集合の場合で深掘り
+まとめを英語で書く（Day 14で確立した方針）
 
-- 数学: indiscrete topology → discrete → finite-closed（英語で）
-- 自分のbungouコードを読む（Claudeとの対話で構造理解）
-- Claude Codeで文豪のPrismaスキーマを確認（プロンプト準備済み）
-- 確認結果をもとに、通常チャットでデータ構造を再設計
-- ネットワークが使える環境でanthropicパッケージをインストール
-- 01のExerciseを実行
-- 02 messages_formatに進む
-- Shannon原論文の続きを日本語でclaudeとの対話によって進む
-- 英語学習の方針確立
+- BUILD（最優先）
+Link機能の実装（色河上でTextVersion同士を接続する操作）
+設計は確定済み。Claude Codeに実装計画を出させてから実装
 
+-Shannon
+Section 1の続き。エントロピーから通信路容量へ
 ---
 
 *最終更新: Day 14 (2026-03-20)*
