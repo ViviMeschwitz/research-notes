@@ -122,6 +122,13 @@ tip jar（GitHub Sponsors or Buy Me a Coffee）
 - ボタンの速度問題
 - Versionボタンだけが目立つのはおかしい
 - 色河でビルごと動かせる
+- 色河でノードのテキストがビルの名前になっている。
+- ビル名も初期値から変更できるようにする。
+- url問題
+- Version機能のUI改善
+- UIとUXは互いを補完する
+- VersionとLinkの視覚的差別化
+- 整形機能
 
 UX
 UI
