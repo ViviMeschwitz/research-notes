@@ -128,8 +128,8 @@ tip jar（GitHub Sponsors or Buy Me a Coffee）
 - Version機能のUI改善
 - UIとUXは互いを補完する
 - VersionとLinkの視覚的差別化
-- 整形機能
-- 色河のプロジェクト化
+- 整形機能 -> スペック
+- 色河のプロジェクト化 -> スペック
 
 UX
 UI
