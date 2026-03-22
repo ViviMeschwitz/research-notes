@@ -129,6 +129,7 @@ tip jar（GitHub Sponsors or Buy Me a Coffee）
 - UIとUXは互いを補完する
 - VersionとLinkの視覚的差別化
 - 整形機能
+- 色河のプロジェクト化
 
 UX
 UI
