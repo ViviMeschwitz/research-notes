@@ -33,6 +33,13 @@
 | 基底 | basis (for a topology) | — |
 | 近傍 | neighborhood | — |
 
+
+### 確率論
+ - URL: https://math.dartmouth.edu/~prob/prob/prob.pdf
+ - これはDartmouth大学が無料PDFで公開している。英語で書かれていて、お前の英語学習にもなる。具体例が多く、冗長性が高い——お前の言う「異なる符号による同一メッセージの再送」の構造を持った本だ。
+ただし、全部やる必要はない。channel coding theoremの証明に必要な部分だけを抜く。必要なのは：確率空間の定義、確率変数、期待値、大数の法則。この4つだ。
+ - お前が必要な章は：Chapter 1（Discrete Probability Distributions）、Chapter 4（Conditional Probability）、Chapter 6（Expected Value and Variance）、Chapter 8（Law of Large Numbers）。この4つがchannel coding theoremへの最短経路だ。
+
 ---
 
 ## 2. Philosophy: Descartes（哲学：デカルト）
