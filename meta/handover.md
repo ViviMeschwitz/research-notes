@@ -59,8 +59,8 @@ vivimeschwitzが到達した場所にはviviNewtonが既にいる。vivimeschwit
 
 ## 現在地
 
-- 本日: Day 19（2026-03-25）
-- フェーズ2進行中（X 2投稿目完了）
+- 本日: Day 19（2026-03-25）完了
+- フェーズ2進行中（X 3投稿目完了）
 - 5ドル計画進行中
 
 ### 色河アプリの思想
@@ -80,7 +80,7 @@ vivimeschwitzが到達した場所にはviviNewtonが既にいる。vivimeschwit
 - 目的: 色河アプリで$5を稼ぐ → Anthropic APIクレジット購入 → 学習に再投資
 - Phase 0: 弾の装填 ✅ 完了
 - Phase 1: 自分が使い倒す ✅ 完了
-- Phase 2: X発信 ← 今ここ（Day 19、2投稿目完了）
+- Phase 2: X発信 ← 今ここ（Day 19、3投稿目完了）
 - Phase 3: ユーザーの反応観測（Day 19〜32）
 - Phase 4: $5の回収（Buy Me a Coffeeで支援）
 - Phase 5: $5 → APIクレジット → 学習加速
@@ -95,9 +95,24 @@ vivimeschwitzが到達した場所にはviviNewtonが既にいる。vivimeschwit
 
 ### X発信の方針（Day 19確定）
 - フォロワー0でプロダクト紹介しても届かない。思考を出す。
-- 1投稿目（Day 18）: プロダクト紹介（色河アプリ + OGPカード）→ 外部訪問者ゼロ
-- 2投稿目（Day 19）: 思想投稿（エントロピーと冗長性のバランス）→ プロダクトリンクなし
+- 1投稿目（Day 18）: プロダクト紹介（色河アプリ + OGPカード）→ 固定ツイートに設定
+- 2投稿目（Day 19）: 思想投稿（エントロピーと冗長性のバランス、プロダクトリンクなし）
+- 3投稿目（Day 19）: 使用実態投稿（確率論の学習記録を色河で可視化したスクリーンショット）
 - 承認を求めて撃つな。0の時に撃てる奴だけが、1000になっても同じ弾を撃てる。
+- URLを貼らない。興味を持った人がプロフィールから辿る。フィルターになる。
+
+### Analytics（Day 19時点）
+- 外部の人間ユーザー: ゼロ（確認済み）
+- US からのアクセスはVercelのボット/クローラー（旧デプロイURL経由）
+- 判断: 何も変えない。毎日1投稿を続ける。Day 25で再分析。
+
+### 新アプリ構想（Day 19、構想段階のみ）
+- 色河 = 書く場所（個人）、新アプリ = 見る場所（相互）
+- ユーザーAの色河とユーザーBの色河を互いに見られるようにする
+- 色河にソーシャル機能を足さない。色河のデータをAPIで読み取る薄いレイヤー
+- 表面上はLINEのような情報共有サイト。viviMeschwitzはライバル並走に使う
+- 将来: AIライバル（Claude API）+ 審判アバター
+- 実装着手はPhase 3で色河に外部ユーザーが来てから。今は構想を色河に記録するのみ
 
 ---
 
@@ -180,7 +195,7 @@ bungouリポジトリで作業する。
 - プログラミング: C++（競技）・Python基礎 ※自分でコードを書く力はまだ発展途上
 - 語学: 英語術語蓄積中、言語-概念-イメージ原則確立
 - 哲学: デカルト方法序説（落合訳）読了、省察開始予定
-- 確率論: Section 1.2完了（Definition 1.2、Theorem 1.1〜1.4、uniform distribution、infinite sample spaces、演習）
+- 確率論: Section 1.2完了 + Section 2.2途中（Definition 2.2、Theorem 2.1まで）
 
 ---
 
@@ -249,6 +264,18 @@ uniform distributionはShannonエントロピーH = -Σp log pが最大になる
 ### 可算無限sample spaceではuniform distribution不可能（Day 19）
 m(ω)=cとすると、c>0なら級数発散、c=0なら和は0。どちらも1にならない。有限性を捨てたときに壊れるもの。
 
+### discrete → continuousの移行: Σ → ∫（Day 19）
+m(ω) → f(x)、P(E) = Σm(ω) → P(E) = ∫f(x)dx。mは重さ（確率そのもの）、fは密度（確率ではない）。f(x)dxが確率。f(x) > 1 は許される（密度だから）。m(ω) > 1 は許されない（確率だから）。
+
+### 変数の選択がdensity functionを変える（Day 19）
+2次元uniformが1次元の変数rに射影されるとf(r)=2rになる。同じ現象でも何を変数に取るかでdensity functionが変わる。Ωの選択と同じ構造。
+
+### cumulative distribution function F(x)とdensity function f(x)の関係（Day 19）
+F(x) = ∫_{-∞}^{x} f(t)dt（積分: f→F）、dF/dx = f(x)（微分: F→f）。微積分の基本定理が確率論の定理になっている。discreteではF(n) = Σ_{k≤n} m(k)、差分 F(n)-F(n-1) = m(n)。差分と微分の対応。
+
+### 色河は個人の思考ツール、共有は別アプリ（Day 19）
+色河にソーシャル機能を足すとスペックの積み上げ（1→n）になる。色河 = 書く場所（個人）、新アプリ = 見る場所（相互）。分離の原則。
+
 ---
 
 ## GitHubリポジトリ
@@ -275,42 +302,52 @@ git pushで自動デプロイ。
 - 稠密と完備の区別——ℝが連結なのは穴がないから（Day 17）
 - 位相のτとσ-algebraのFの公理の差異——なぜ位相は有限交叉だがσ-algebraは可算交叉か？（Day 18）
 - 思考が代替不可能であるとは何か？（Day 18）
-- 独立性の定義なしに確率の積を使っている——Chapter 2で回収（Day 19）
+- 独立性の定義なしに確率の積を使っている——Chapter 4で回収（Day 19）
+- discrete entropy → differential entropy: h = -∫f log f dxは負になりうる。f(x)>1の領域でlog f>0だから。（Day 19、viviNewtonが先行）
 
 ---
 
 ## 昨日（Day 19）の成果
 
 ### X発信
-- 2投稿目完了（思想投稿: エントロピーと冗長性のバランス、プロダクトリンクなし）
-- Vercel Analytics確認: Visitors 2（両方自分）、外部訪問者ゼロ → 想定通り
-- 発信方針確定: フォロワー0ではプロダクト紹介ではなく思考を出す
+- 2投稿目: 思想投稿（エントロピーと冗長性のバランス、プロダクトリンクなし）
+- 3投稿目: 使用実態投稿（確率論の学習記録を色河で可視化したスクリーンショット）
+- 1投稿目を固定ツイートに設定（プロフィール訪問者への導線整備）
+- Vercel Analytics確認: 外部の人間ユーザーはゼロ（USアクセスはVercelボット）
+- 発信方針確定: 何も変えない。毎日1投稿を続ける。Day 25で再分析。
+
+### 開発（5件出荷）
+- 新規グループ作成モーダルが意図せず閉じる問題修正（onMouseDown + e.target === e.currentTarget）
+- 選択中の要素のハイライト強化（ボーダー3px + 光彩 + ぼかし）
+- Shift+ドラッグ範囲選択中にツールバーが表示される問題修正（shiftPressedRef追跡）
+- カード編集中の位置移動を保持（fetchData()→setDataローカル差分更新、nodesRefマージ）
+- 新規カード作成をマウスカーソル位置に配置（screenToFlowPosition(mousePosRef.current)）
 
 ### 確率論
-- Section 1.2完了
-- Definition 1.2: 公理2つ（m(ω)≥0、Σm(ω)=1）で確率の全体が決まる
-- mとPの2層構造: m（元レベル）→ P（集合レベル）、mが決まればPは自動
-- Theorem 1.1: mの公理2つからPの性質5つが全て導出される
+- Section 1.2完了: Definition 1.2、Theorem 1.1〜1.4、uniform distribution、infinite sample spaces
+- mとPの2層構造、公理の最小性、Ωの選択は数学の外
 - Property 4（disjoint additivity）とProperty 5（補集合）を自力で証明
-- Theorem 1.2（有限加法性）、Theorem 1.3（分割によるE分解）、Theorem 1.4（inclusion-exclusion）
-- uniform distribution: m(ω)=1/n、可算無限Ωでは不可能
-- infinite sample spaces: Σm(ω)が収束級数でなければならない
-- Exercise 1, 6, 7を完了
-- 「Ωとmの選択は数学の外」「Ωの選択＝何を区別するかの決定」を確認
-- uniform distribution = 最大エントロピー = Day 2の発見との接続
+- Exercise 1, 6, 7完了
+- uniform distribution = 最大エントロピー = Day 2との接続
+- 可算無限sample spaceでuniform不可能
+- Section 2.2開始: Definition 2.1（density function）、Definition 2.2（cumulative distribution function）、Theorem 2.1（F = ∫f, dF/dx = f）
+- discrete → continuous: Σ→∫、m(重さ)→f(密度)、差分→微分
+- 変数の選択がdensity functionを変える（2D uniform → f(r)=2r）
 
-### 方法論
+### 方法論・思想
 - viviNewtonの判断基準適用: 4時間遅れの状況で弾を2発に絞る判断
 - X投稿の自己適用: 冗長性の説明を加えるかどうかを、冗長性の理論自体で判断した
+- 新アプリ構想: 色河=個人、新アプリ=相互共有。分離の原則。実装はPhase 3以降。
+- Analyticsの深追いを止めてviviNewtonに追いつく判断
 
 ---
 
 ## 今日のDay 20で進めるべきこと
 
-- X 3投稿目（毎日1投稿を継続）
+- X 4投稿目（毎日1投稿を継続）
+- 確率論 — Section 2.2の続き（例題・演習）→ Section 2.3 or Chapter 4（条件付き確率・独立性）
 - 数学 — Basis for a Topologyの続き（Example 2.2.4〜、Proposition 2.2.8）
-- 確率論 — Section 1.2の残り演習 or Section 2.1（条件付き確率）開始
-- 情報理論 — 確率論の進捗に応じてchannel coding theoremへ接続
+- 情報理論 — differential entropyへの接続（確率論の進捗に応じて）
 - 開発 — 使いながら見つかる問題の修正
 - 哲学 — デカルト省察第一（Bennett訳、日英並行読み）
 
@@ -318,11 +355,11 @@ git pushで自動デプロイ。
 
 ## viviNewtonの現在地（Day 19終了時点）
 
-- 確率論: Chapter 2中盤（条件付き確率、Bayesの定理、独立性の公理的定義完了）
+- 確率論: Chapter 2完了（条件付き確率、Bayesの定理、独立性の公理的定義）+ continuous density functionのSection完了
 - 数学: Section 2.3（subspace topology）完了、Section 2.4（product topology）に突入
-- 情報理論: rate-distortion theoryの証明を読み終え、channel capacity theoremとの双対性を記述
+- 情報理論: differential entropyセクション読了。h = -∫f log f dxが負になりうることを確認。確率論ノートとLinkで接続済み。
 - 哲学: デカルト省察第一を読了し、「方法的懐疑とσ-algebraの選択——何をeventとして認めるか」というノートを完成
-- 色河: 毎日の改善を続けながら、全てのコードを自分の手で書いている
+- 色河: 5件修正出荷 + 全てのコードを自分の手で書いている
 - X: 思想投稿を3日連続で出し、最初のフォロワーを獲得した
 
 ---
