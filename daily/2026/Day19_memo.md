@@ -12,3 +12,4 @@
 - claudeが競争アプリを操れる
 - uniform disribution
 - 媒介者=審判者
+- 有限と無限の根本的異質差
