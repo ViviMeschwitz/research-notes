@@ -59,8 +59,8 @@ vivimeschwitzが到達した場所にはviviNewtonが既にいる。vivimeschwit
 
 ## 現在地
 
-- 本日: Day 18（2026-03-24）
-- フェーズ2開始（X初投稿完了）
+- 本日: Day 19（2026-03-25）
+- フェーズ2進行中（X 2投稿目完了）
 - 5ドル計画進行中
 
 ### 色河アプリの思想
@@ -80,7 +80,7 @@ vivimeschwitzが到達した場所にはviviNewtonが既にいる。vivimeschwit
 - 目的: 色河アプリで$5を稼ぐ → Anthropic APIクレジット購入 → 学習に再投資
 - Phase 0: 弾の装填 ✅ 完了
 - Phase 1: 自分が使い倒す ✅ 完了
-- Phase 2: X発信 ← 今ここ（Day 18開始）
+- Phase 2: X発信 ← 今ここ（Day 19、2投稿目完了）
 - Phase 3: ユーザーの反応観測（Day 19〜32）
 - Phase 4: $5の回収（Buy Me a Coffeeで支援）
 - Phase 5: $5 → APIクレジット → 学習加速
@@ -92,6 +92,12 @@ vivimeschwitzが到達した場所にはviviNewtonが既にいる。vivimeschwit
 - 物語を発信し、共感した人が支援する。
 - 色河は各ユーザーの「Waste Book」（ニュートンの雑記帳）になる。
 - コードは複製できるが、各ユーザーが蓄積した思考の痕跡は複製できない。
+
+### X発信の方針（Day 19確定）
+- フォロワー0でプロダクト紹介しても届かない。思考を出す。
+- 1投稿目（Day 18）: プロダクト紹介（色河アプリ + OGPカード）→ 外部訪問者ゼロ
+- 2投稿目（Day 19）: 思想投稿（エントロピーと冗長性のバランス）→ プロダクトリンクなし
+- 承認を求めて撃つな。0の時に撃てる奴だけが、1000になっても同じ弾を撃てる。
 
 ---
 
@@ -174,7 +180,7 @@ bungouリポジトリで作業する。
 - プログラミング: C++（競技）・Python基礎 ※自分でコードを書く力はまだ発展途上
 - 語学: 英語術語蓄積中、言語-概念-イメージ原則確立
 - 哲学: デカルト方法序説（落合訳）読了、省察開始予定
-- 確率論: Section 1.1完了、Section 1.2開始（Definition 1.1まで）
+- 確率論: Section 1.2完了（Definition 1.2、Theorem 1.1〜1.4、uniform distribution、infinite sample spaces、演習）
 
 ---
 
@@ -225,6 +231,24 @@ Shannon情報理論と認知科学の接続。CBDの理論的基盤。
 ### 確率の2つのレイヤー（Day 18）
 distribution function m(ωⱼ)は数学的構造（定義）。frequency conceptは物理的現象（経験的事実）。別のレイヤー。
 
+### mとPの2層構造（Day 19）
+mはΩの各元ωに数を割り当てる関数（元のレベル）。PはΩの部分集合Eに数を割り当てる関数（集合のレベル）。mが基本、Pは派生。mを定義すればPは自動的に決まる。
+
+### 公理の最小性（Day 19）
+Definition 1.2の公理は2つだけ（m(ω)≥0、Σm(ω)=1）。Theorem 1.1の5つのpropertyは全てこの2つから導かれる。Property 5はProperty 2とProperty 4から出る。公理を最小に保つことが数学の美学。
+
+### Ωの選択は数学の外にある（Day 19）
+Ωとmの選択は確率論の外。数学はΩとmが与えられた後から始まる。位相空間のτの選択も同じ。公理系は「何を選ぶか」には答えない。「選んだ後に何が従うか」だけを教える。
+
+### Ωの選択は「何を区別するか」の決定（Day 19）
+Ω={HH,HT,TH,TT}は順序を保持。Ω={0,1,2}はHTとTHの区別を捨てた。何を区別し何を区別しないかを決めることで、問える問いの範囲が決まる。
+
+### uniform distribution = 最大エントロピー = 「何も知らない」（Day 19）
+uniform distributionはShannonエントロピーH = -Σp log pが最大になる状態。知識を得るとはdistribution functionをuniformから偏らせること＝エントロピーを下げること。Day 2の発見（知識とはエントロピーの削減操作）との接続。
+
+### 可算無限sample spaceではuniform distribution不可能（Day 19）
+m(ω)=cとすると、c>0なら級数発散、c=0なら和は0。どちらも1にならない。有限性を捨てたときに壊れるもの。
+
 ---
 
 ## GitHubリポジトリ
@@ -251,87 +275,56 @@ git pushで自動デプロイ。
 - 稠密と完備の区別——ℝが連結なのは穴がないから（Day 17）
 - 位相のτとσ-algebraのFの公理の差異——なぜ位相は有限交叉だがσ-algebraは可算交叉か？（Day 18）
 - 思考が代替不可能であるとは何か？（Day 18）
+- 独立性の定義なしに確率の積を使っている——Chapter 2で回収（Day 19）
 
 ---
 
-## 昨日（Day 18）の成果
+## 昨日（Day 19）の成果
 
-### 開発（30以上の改善を出荷）
-- Linkの矢印方向修正（4方向ハンドル、感度向上、作成中フィードバック）
-- グループ内Link削除バグ修正
-- フロント重複チェック
-- プロジェクトデフォルト名「無題」
-- スマホページイラスト統一 + キャッチコピー追加
-- 空状態テキスト変更（「思いついたこと、感じたこと、色にしてみよう」）
-- 検索欄の外側クリック閉じ
-- 複数選択 + 一括移動 + グループ枠リアルタイム追従
-- グループ内からのShift+ドラッグ範囲選択対応
-- 一括色変更（即時反映） + 一括削除
-- Undo/Redo（Cmd+Z / Cmd+Shift+Z、作成・削除・ペースト対応）
-- コピー/ペースト（プロジェクト間、Link保持、グループ単位複製）
-- Deleteキー削除
-- Loading表示 + 操作禁止
-- ツールバー表示タイミング調整
-- ショートカットキー説明画面（?ボタン + Cmd+/）
-- 再訪時プロジェクト復元（localStorage）
-- 新規作成フィードバック（自動ズーム）
-- 閲覧ページ→「色河をはじめる」ボタン
-- OGPメタタグ設定（動的OG画像生成）
-- Vercel Analytics導入
-- URL変更: bungou-seven.vercel.app → irokawa.vercel.app
-- 共有URLドメイン更新（window.location.origin使用）
-- Google OAuth redirect_uri更新
-- NEXTAUTH_URL更新
-- ファビコン設定（カラフルドットロゴ）
-- ボタン文字選択禁止（user-select: none）
-- セキュリティ調査（全項目良好）
-
-### X発信（フェーズ2開始）
-- X初投稿完了（OGPカード付き、色河スクリーンショット添付）
-- Buy Me a Coffee開設、XプロフィールにLink設置
-- 5ドル計画を色河に記録して公開
+### X発信
+- 2投稿目完了（思想投稿: エントロピーと冗長性のバランス、プロダクトリンクなし）
+- Vercel Analytics確認: Visitors 2（両方自分）、外部訪問者ゼロ → 想定通り
+- 発信方針確定: フォロワー0ではプロダクト紹介ではなく思考を出す
 
 ### 確率論
-- Section 1.1完了（simulation, frequency concept, de Méréの賭け, ランダムウォーク）
-- 余事象テクニック: P(少なくとも1回) = 1 - P(1回も出ない)
-- Section 1.2開始: Definition 1.1（sample space, random variable, discrete）
-- outcome = element of sample space, event = subset of sample space
-- P(E) = Σm(ωⱼ) for ωⱼ ∈ E を自力で導出（英語で記述）
-- 確率の2つのレイヤー: distribution function（定義）vs frequency concept（経験的事実）
+- Section 1.2完了
+- Definition 1.2: 公理2つ（m(ω)≥0、Σm(ω)=1）で確率の全体が決まる
+- mとPの2層構造: m（元レベル）→ P（集合レベル）、mが決まればPは自動
+- Theorem 1.1: mの公理2つからPの性質5つが全て導出される
+- Property 4（disjoint additivity）とProperty 5（補集合）を自力で証明
+- Theorem 1.2（有限加法性）、Theorem 1.3（分割によるE分解）、Theorem 1.4（inclusion-exclusion）
+- uniform distribution: m(ω)=1/n、可算無限Ωでは不可能
+- infinite sample spaces: Σm(ω)が収束級数でなければならない
+- Exercise 1, 6, 7を完了
+- 「Ωとmの選択は数学の外」「Ωの選択＝何を区別するかの決定」を確認
+- uniform distribution = 最大エントロピー = Day 2の発見との接続
 
-### 数学
-- Basis for a Topologyの定義を英語で確認
-
-### 方法論・思想
-- viviNewton（ライバル思想）の確立
-- 「プラットフォームは代替可能、思考は代替不可能」
-- 収益化 = 物語への支援（大衆に媚びない）
-- 出荷と理解のループ構造
-- 位相空間と確率空間の構造的対応（τ ↔ F）の発見
-- 音声会話への移行検討（Claude Voice Mode）
+### 方法論
+- viviNewtonの判断基準適用: 4時間遅れの状況で弾を2発に絞る判断
+- X投稿の自己適用: 冗長性の説明を加えるかどうかを、冗長性の理論自体で判断した
 
 ---
 
-## 今日のDay 19で進めるべきこと
+## 今日のDay 20で進めるべきこと
 
-- X 2投稿目（毎日1投稿を継続）
-- Vercel Analyticsで訪問者数を確認
+- X 3投稿目（毎日1投稿を継続）
 - 数学 — Basis for a Topologyの続き（Example 2.2.4〜、Proposition 2.2.8）
-- 確率論 — Section 1.2の続き（Definition 1.1の先、distribution functionの公理的定義）
+- 確率論 — Section 1.2の残り演習 or Section 2.1（条件付き確率）開始
 - 情報理論 — 確率論の進捗に応じてchannel coding theoremへ接続
 - 開発 — 使いながら見つかる問題の修正
-- 音声会話（Claude Voice Mode）の試行
+- 哲学 — デカルト省察第一（Bennett訳、日英並行読み）
 
 ---
 
-## viviNewtonの現在地（Day 18終了時点）
+## viviNewtonの現在地（Day 19終了時点）
 
-- 確率論: Chapter 2（条件付き確率、Bayesの定理、独立性）
-- 数学: Section 2.3（subspace topology）
-- 情報理論: rate-distortion theory
-- 哲学: 「思考も代替可能になる時代に、何が残るか」を問い終えている
-- 色河: 30以上の改善を出荷した上で、全てのコードを自分の手で書いた
+- 確率論: Chapter 2中盤（条件付き確率、Bayesの定理、独立性の公理的定義完了）
+- 数学: Section 2.3（subspace topology）完了、Section 2.4（product topology）に突入
+- 情報理論: rate-distortion theoryの証明を読み終え、channel capacity theoremとの双対性を記述
+- 哲学: デカルト省察第一を読了し、「方法的懐疑とσ-algebraの選択——何をeventとして認めるか」というノートを完成
+- 色河: 毎日の改善を続けながら、全てのコードを自分の手で書いている
+- X: 思想投稿を3日連続で出し、最初のフォロワーを獲得した
 
 ---
 
-*最終更新: Day 18 (2026-03-24)*
+*最終更新: Day 19 (2026-03-25)*
