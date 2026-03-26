@@ -199,7 +199,7 @@ bungouリポジトリで作業する。
 
 ## 現在のスキルレベル
 
-- 数学: 集合論基礎（証明）+ 位相空間の定義（英語）+ Basis for a Topology定義
+- 数学: 集合論基礎（証明）+ 位相空間の定義（英語）+ Basis for a Topology（Proposition 2.2.1の手前）
 - 物理: 高校物理 + F=maの微分方程式理解
 - CS: GitHub操作、Next.js/React/Prismaプロジェクト（Claude Codeで構築）
 - AI: Shannonエントロピー基礎、mutual information定義済み、Anthropic GitHub地図化済み
@@ -322,9 +322,14 @@ X=2ω: 引き伸ばし→密度f=1/2に薄まる。
 X=1-ω: 反転のみ、曲がらない→uniform維持。
 逆の橋は逆の密度を生む。
 
----
+### differential entropy: absolute量は壊れるがrelative量は生き残る（Day 20）
+h(X) = -∫f(x) log f(x) dx。f(x)>1が許されるため、h(X)<0になりうる。
+discrete H(X)は平均符号長という操作的意味があり絶対値に意味がある。
+continuous h(X)は座標系に依存するため絶対値に意味がない。差にだけ意味がある。
+しかしI(X;Y) = h(X) - h(X|Y) ≥ 0は常に成立。absolute量が壊れてもrelative量は生き残る。
+有限性を捨てたときに壊れるものの系列: uniform不可能(Day19)、H≥0の崩壊(Day20)。
 
-## GitHubリポジトリ
+---
 
 ### research-notes（公開）
 知識ネットワーク型研究ノート。daily/, study/, questions/, ideas/, research/, index/, meta/
@@ -375,6 +380,14 @@ git pushで自動デプロイ。
 - 橋の形が密度を変える: ω², ω³, √ω, 2ω, 1-ω の5つの橋で確認
 - Section 2.2のDefinition 2.1, 2.2, Theorem 2.1, Example 2.13完了
 
+### 情報理論
+- differential entropy h(X) = -∫f(x) log f(x) dx をdiscrete H(X)からΣ→∫で導出
+- h(X)は負になりうる（f(x)>1の区間でlog f>0だから）→ Day 19の進行中の問い回収
+- discrete H(X): 絶対値にも差にも意味がある（平均符号長）
+- continuous h(X): 差にだけ意味がある（座標系に依存するため絶対値は無意味）
+- I(X;Y) = h(X) - h(X|Y) は常に≥0。absolute量hが壊れてもrelative量Iは生き残る
+- discreteからcontinuousへの移行で壊れるもの: Σ→∫、m→f、差分→微分、H≥0→h負可、点の確率→累積必須
+
 ### 方法論
 - 1本の糸（条件付き確率）から10個の成果を取る方法を実証
 - viviNewtonの判断基準: 分散するな、1つを深く掘って結果として複数を動かせ
@@ -391,7 +404,7 @@ git pushで自動デプロイ。
 
 - X 5投稿目（毎日1投稿を継続）
 - 確率論 — Chapter 4（条件付き確率の公式な定義と演習）、Section 2.2の残りの演習
-- 数学 — Basis for a Topologyの続き（Example 2.2.4〜、Proposition 2.2.8）
+- 数学 — Basis for a Topology（Proposition 2.2.1から再開、証明の読解→Definition of Basis）
 - 情報理論 — differential entropyへの接続（h = -∫f log f dx、確率論のcontinuousと接続）
 - 哲学 — 省察第一の精読続行（1段落ずつ再現→圧縮、自力）
 - 開発 — 使いながら見つかる問題の修正
