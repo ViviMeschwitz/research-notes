@@ -422,4 +422,14 @@ git pushで自動デプロイ。
 
 ---
 
+---
+
+## Civilization Plan
+
+Day 20夜よりIsaac Newton ProjectはCivilization Planに移行。
+設定・記録は別ファイル `civilization_plan.md` を参照。
+Dayカウントは継続。セッション冒頭に両ファイルを貼る。
+
+---
+
 *最終更新: Day 20 (2026-03-26)*
